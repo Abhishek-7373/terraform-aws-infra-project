@@ -75,3 +75,119 @@ terraform-prod-project/
 ├── .gitignore
 ├── README.md
 └── project_img.png
+
+Terraform Files Explanation
+provider.tf
+
+Configures AWS provider and region.
+
+variables.tf
+
+Contains reusable variables.
+
+terraform.tfvars
+
+Stores variable values.
+
+main.tf
+
+Contains all AWS infrastructure resources.
+
+outputs.tf
+
+Displays output values after deployment.
+
+locals.tf
+
+Stores reusable local values and tags.
+
+backend.tf
+
+Configures remote S3 backend for Terraform state.
+
+.gitignore
+
+Prevents sensitive files from uploading to GitHub.
+
+Features Implemented
+Infrastructure as Code
+Secure SSH Access
+Dynamic Ubuntu AMI Lookup
+Reusable Variables
+Resource Tagging
+Remote Terraform Backend
+Production-style Project Structure
+Security Improvements
+Restricted SSH access to admin public IP
+Sensitive files excluded using .gitignore
+Remote state management using S3 backend
+Terraform Workflow
+Initialize Terraform
+terraform init
+Validate Configuration
+terraform validate
+Check Execution Plan
+terraform plan
+Deploy Infrastructure
+terraform apply
+Destroy Infrastructure
+terraform destroy
+Remote Backend Configuration
+
+Terraform state is stored remotely in AWS S3 backend.
+
+Benefits:
+
+Centralized state management
+Better collaboration
+Safer state handling
+Production-style workflow
+Infrastructure Created
+
+The project creates:
+
+1 VPC
+1 Public Subnet
+1 Internet Gateway
+1 Route Table
+1 Route Table Association
+1 Security Group
+1 EC2 Ubuntu Instance
+1 S3 Backend Bucket
+SSH Access
+
+SSH access is restricted to the administrator public IP.
+
+Example:
+
+cidr_blocks = ["YOUR_PUBLIC_IP/32"]
+Dynamic Ubuntu AMI
+
+The latest Ubuntu AMI is automatically fetched using Terraform data source.
+
+Example:
+
+data "aws_ami"
+Production Concepts Practiced
+Infrastructure as Code
+Terraform State Management
+Remote Backend
+Secure Networking
+Terraform Variables
+Terraform Outputs
+Resource Tagging
+Infrastructure Lifecycle Management
+Learning Outcomes
+
+After completing this project, you will understand:
+
+Terraform basics
+AWS infrastructure provisioning
+Terraform workflow
+Remote backend management
+Secure cloud networking
+Production-style Terraform practices
+Author
+
+Abhishek
+DevOps & Cloud Engineering Lab Project
